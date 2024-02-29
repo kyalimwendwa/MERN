@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/cards.css">
+  <link rel="stylesheet" href="/prodlist.css">
+  <link rel="stylesheet" href="/prod.css">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= category %> Products</title>
+</head>
+<body>
+  <% products.forEach(product => { %>
+    <% }); %>
+    <header>
+      <div class="logo">
+        Ahub
+      </div>
+  
+      <nav class="nav">
+        <li class="dropdown">
+          Living Room
+          <div class="dropdown-content">
+            <a href="/products/LivingRoom/Sectionals" class="link-with-icon">Sectionals<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/LivingRoom/Sofas" class="link-with-icon">Sofas<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/LivingRoom/Chairs" class="link-with-icon">Chairs<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/LivingRoom/Tv Stands" class="link-with-icon">TV Stands<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/LivingRoom/Coffee Table" class="link-with-icon">Coffee Table<i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </li>
+  
+        <li class="dropdown">
+          Dining Room
+          <div class="dropdown-content">
+            <a href="/products/DiningRoom/Dining Tables" class="link-with-icon">Dining Tables<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/DiningRoom/Dining Chairs" class="link-with-icon">Dining Chairs<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/DiningRoom/Dining Sets" class="link-with-icon">Dining Sets<i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </li>
+  
+        <li class="dropdown">
+          Bedroom
+          <div class="dropdown-content">
+            <a href="/products/Bedroom/Beds" class="link-with-icon">Beds<i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </li>
+  
+        <li class="dropdown">
+          Outdoor
+          <div class="dropdown-content">
+            <a href="/products/Outdoor/Outdoor Sectionals" class="link-with-icon" >Outdoor Sectionals<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/Outdoor/Outdoor Chairs" class="link-with-icon">Outdoor Chairs<i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </li>
+  
+        <li class="dropdown">
+          Home office
+          <div class="dropdown-content">
+            <a href="/products/HomeOffice/Office Chairs" class="link-with-icon">Office Chairs<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/HomeOffice/Office Tables" class="link-with-icon">Office Tables<i class="ri-arrow-right-s-line"></i></a>
+            <a href="/products/HomeOffice/Office Sets" class="link-with-icon">Office Sets<i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </li>
+      </nav>
+  
+      <div class="icons">
+        <a href="/login"><i class="ri-user-line"></i></a>
+        <a href="/shoppingcart"><i class="ri-shopping-bag-2-line"></i></a>
+      </div>
+    </header>
+
+    
+
+  <div class="bestsellers">
+    
+     <!-- Swiper -->
+     <div class="swiper mySwiper">
+    
+      
+
+
+
+      <div class="swiper-wrapper">
+        
+        <% products.forEach(product => { %>
+          <a href="/products/<%= product.name %>">
+            <div class="swiper-slide">
+              <div class="slideshow">
+                <img src="data:<%= product.mainImage.contentType %>;base64,<%= product.mainImage.data.toString('base64') %>" alt="<%= product.name %>">
+              </div>
+             <div class="card-content">
+              <h2><%= product.name %></h2>
+              <p><span>KES</span>&nbsp;<%= product.price %></p>
+             </div>
+              
+              
+            </div>
+          </a>
+          
+      <% }); %>
+      
+      </div>
+     </div>
+    
+
+  </div>
+
+
+  <section class="footer1">
+    <div class="footer-content">
+     <h1>Our Company</h1>
+       <ul>
+         <li>Home</li>
+         <li>Terms & Conditions</li>
+         <li>Privacy policy</li>
+         <li>About Us</li>
+         <li>Contact us</li>
+       </ul>
+    </div>
+    <div class="footer-content">
+     <h1>Get Help</h1>
+     <ul>
+       <li>FAQs</li>
+       <li>Shipping</li>
+       <li>Returns</li>
+       <li>Order Status</li>
+       <li>Payment options</li>
+     </ul>
+   </div>
+
+   <div class="footer-content">
+     <h1>Explore</h1>
+     <ul>
+       <li>Living Room</li>
+       <li>Dining Room</li>
+       <li>Bedroom</li>
+       <li>Outdoor</li>
+       <li>Home Office</li>
+     </ul>
+   </div>
+
+   <div class="footer-content">
+     <h1>Follow us</h1>
+     <div class="social_links">
+       <li><i class="ri-twitter-x-line"></i></li>
+       <li><i class="ri-facebook-fill"></i></li>
+       <li><i class="ri-instagram-line"></i></li>
+       <li><i class="ri-linkedin-line"></i></li>
+     </div>
+   </div>
+   
+ </section>
+  
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+   var swiper = new Swiper(".mySwiper", {
+     slidesPerView: 4,
+     spaceBetween: 10,
+     //loop: true,
+    // autoplay: {
+     // delay: 2500,
+     // disableOnInteraction: false,
+   // },
+   
+     navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     },
+   });
+ </script>
+ 
+ 
+
+ <script>
+  function addToCart(name, price, color, image) {
+    // Get the existing cart data from local storage or initialize an empty array
+    const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Get the quantity from the input field
+    const quantity = parseInt(document.getElementById('quantity').value) || 1;
+
+    // Ensure that cartData is an array
+    if (!Array.isArray(cartData)) {
+      // If it's not an array, initialize an empty array
+      const newCartData = [];
+      newCartData.push(cartData);
+      localStorage.setItem('cart', JSON.stringify(newCartData));
+    } else {
+      // Check if the product is already in the cart
+      const existingProduct = cartData.find(product => product.name === name && product.color === color);
+
+      if (existingProduct) {
+        // If the product is already in the cart, update the quantity
+        existingProduct.quantity += quantity;
+      } else {
+        // If the product is not in the cart, add it
+        const newProduct = { name, price, quantity, color, image };
+        cartData.push(newProduct);
+      }
+
+      // Save the updated cart data back to local storage
+      localStorage.setItem('cart', JSON.stringify(cartData));
+    }
+  }
+</script>
+
+</body>
+</html>

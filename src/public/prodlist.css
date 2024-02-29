@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+   
+  }
+  body{
+    background-color:#f0f2f9;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+   padding: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  
+  .bestsellers .swiper .swiper-slide {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    background-color: #fff;
+  
+    
+  }
+  .bestsellers .swiper .swiper-slide:hover{
+    cursor: pointer;
+  }
+ 
+  .bestsellers .swiper .swiper-slide .card-content {
+    
+   align-items: center;
+   justify-content: center;
+  
+   padding: 1rem;
+  }
+  .bestsellers .swiper .swiper-slide .card-content button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #213047;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    width: max-content;
+    height: 35px;
+  }
+  
+  
+
+  .bestsellers .swiper .swiper-slide .card-content p{
+    font-size: 13px;
+    color: #213047;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .bestsellers .swiper .swiper-slide .card-content span{
+    font-size: 13px;
+    color: #213047;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .bestsellers .swiper .swiper-slide .card-content h2{
+    font-size: 14px;
+    color: #213047;
+    
+  }
+  .bestsellers .swiper .swiper-slide .card-content .div__flex{
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .bestsellers .swiper .swiper-slide .card-content .div__flex h2{
+    font-size: 15px;
+    color: #213047;
+    
+    display: flex;
+  }
+  .bestsellers .swiper .swiper-slide .card-content .div__flex .span{
+    font-size: 15px;
+    color: #213047;
+    
+   
+  }
+  
+ 
+  .bestsellers .swiper .swiper-slide .slideshow img{
+    width: 100%; /* Adjust the initial width as needed */
+     /* Maintain the aspect ratio */
+    display: block; /* Ensure block-level display for centering */
+    margin: 0 auto; /* Center the image horizontally */
+    max-height: 50vh;
+   align-items: center;
+   justify-content: center;
+    
+  }
+  .bestsellers .swiper .swiper-slide .slideshow{
+    
+    padding: 1rem;
+    
+  }
+  
+  .bestsellers .swiper {
+    width: 100%;
+    height: 500px;
+    margin-top: 15rem;
+    align-items: center;
+    justify-content: center;
+    
+   
+  }
+
+
+  .bestsellers .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bestsellers .swiper-button-next::after,
+  .bestsellers .swiper-button-prev::after {
+    color: #213047; /* Set your desired color */
+    font-size: 24px;
+    top: 50%;
+    width: 30px;
+    transform: translateY(-50%);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+   
+  }
+  
+.bestsellers .swiper-button-next img{
+  width: 48px;
+  height: 48px;
+}
